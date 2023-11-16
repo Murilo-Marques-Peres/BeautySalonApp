@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Beauty Salon</string>
+    <string name="total">Total</string>
+    <string name="entrada">Entrada</string>
+    <string name="sa_da">Saída</string>
+    <string name="p_gina_inicial">Página Inicial</string>
+    <string name="editar">Editar</string>
+    <string name="voltar">Voltar</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="inserir_cliente">Inserir Cliente</string>
+    <string name="valor">Valor</string>
+    <string name="servi_o">Serviço</string>
+    <string name="nome_do_cliente">Nome Do Cliente:</string>
+    <string name="nome_do_cliente2">Nome do Cliente</string>
+    <string name="servi_o2">Serviço:</string>
+    <string name="valor2">Valor:</string>
+    <string name="devendo">Devendo:</string>
+    <string name="data2">Data:</string>
+</resources>
