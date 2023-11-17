@@ -31,4 +31,6 @@
     <string name="deseja_remover_este_elemento">Deseja Remover Este Elemento?</string>
     <string name="sim">Sim</string>
     <string name="n_o">Não</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="remover">Remover</string>
 </resources>

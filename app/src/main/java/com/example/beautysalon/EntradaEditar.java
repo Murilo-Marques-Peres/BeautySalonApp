@@ -98,6 +98,15 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
 
                 servicoDAO.inserir(servicoDTO);
                 //Date dataFormatada = formato.parse();
+
+                campoNomeCliente.setText("");
+                campoServico.setText("");
+                campoValor.setText("");
+                campoDia.setText("");
+                campoMes.setText("");
+                campoAno.setText("");
+
+                Toast.makeText(EntradaEditar.this, "Dados Adicionados!", Toast.LENGTH_SHORT).show();
             }
         });
 

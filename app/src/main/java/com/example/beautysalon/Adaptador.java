@@ -1,6 +1,7 @@
 package com.example.beautysalon;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,8 +60,12 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.NossoViewHolder>{
             mTVData = itemView.findViewById(R.id.textView18);
             btnRemover1 = itemView.findViewById(R.id.button8);
 
+            servicoDAO = new ServicoDAO(itemView.getContext());
+
             String clienteNomeRemocao = mTVCliente.getText().toString();
             String servicoRemocao = mTVServico.getText().toString();
+
+
 
             btnRemover1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -78,8 +83,18 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.NossoViewHolder>{
                     btnConfirmar.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Toast.makeText(itemView.getContext(), "" + clienteNomeRemocao, Toast.LENGTH_SHORT).show();
 
+                            String clienteNomeRemocao = mTVCliente.getText().toString();
+                            String servicoRemocao = mTVServico.getText().toString();
+                            Toast.makeText(itemView.getContext(), "Dados Apagados!", Toast.LENGTH_SHORT).show();
+                            servicoDAO.remover(clienteNomeRemocao, servicoRemocao);
+                            dialog.dismiss();
+                        }
+                    });
+                    btnNegar.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
                         }
                     });
                 }

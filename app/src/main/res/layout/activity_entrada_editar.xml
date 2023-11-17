@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".EntradaEditar"
-    >
+    android:background="#987777"
+    tools:context=".EntradaEditar">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="100sp"
+            android:background="@android:color/holo_red_dark"
             android:gravity="center"
             android:text="@string/inserir_cliente"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -31,18 +33,23 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#C70AD5"
                 android:gravity="center|end"
-                android:text="@string/nome_do_cliente" />
+                android:text="@string/nome_do_cliente"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="241dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="#C70AD5"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="@string/nome_do_cliente2"
+                android:hint="Digite Nome do Cliente"
                 android:inputType="textPersonName"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -56,18 +63,23 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
                 android:gravity="center|end"
-                android:text="@string/servi_o2" />
+                android:text="@string/servi_o2"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName3"
                 android:layout_width="241dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="@string/servi_o"
+                android:hint="Digite Serviço"
                 android:inputType="textPersonName"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -81,18 +93,22 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
                 android:gravity="center|end"
-                android:text="@string/valor2" />
+                android:text="@string/valor2"
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName4"
                 android:layout_width="241dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="@string/valor"
+                android:hint="Digite Valor"
                 android:inputType="textPersonName"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -106,13 +122,15 @@
                 android:layout_width="0dp"
                 android:layout_height="51dp"
                 android:layout_weight="1"
+                android:background="#F32020"
                 android:gravity="center|end"
-                android:text="@string/devendo" />
+                android:text="@string/devendo"
+                android:textColor="@color/white" />
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -128,38 +146,46 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#E60EDB"
                 android:gravity="center|end"
-                android:text="@string/data2" />
+                android:text="@string/data2"
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/editTextNumber3"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="#E60EDB"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Dia"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/editTextNumber2"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="#E60EDB"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Mês"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/editTextNumber"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:background="#E60EDB"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Ano"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>

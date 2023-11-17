@@ -23,6 +23,7 @@ public class Entrada1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Entrada1.this, EntradaVisualizar.class);
                 startActivity(intent);
+
             }
         });
 
