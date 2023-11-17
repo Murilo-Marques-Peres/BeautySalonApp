@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class ServicoDAO {
     private Conexao conexao1;
@@ -14,32 +15,31 @@ public class ServicoDAO {
         conexao1 = new Conexao(context);
         banco = conexao1.getWritableDatabase();
     }
+    ArrayList<ServicoDTO> listaPesquisar = new ArrayList<>();
 
-    public void inserir(Servico servico){
+    public void inserir(ServicoDTO servicoDTO){
         Cursor cursor = banco.query("servico", new String[]{"id","cliente","nomeservico","valor","dataservico","devendo"},  null, null, null, null, null);
         ContentValues values = new ContentValues();
-        values.put("cliente", servico.getCliente());
-        values.put("nomeservico", servico.getNomeServico());
-        values.put("valor", servico.getValor());
-        values.put("dataservico", servico.getData());
-        values.put("devendo", servico.getDevendo());
+        values.put("cliente", servicoDTO.getCliente());
+        values.put("nomeservico", servicoDTO.getNomeServico());
+        values.put("valor", servicoDTO.getValor());
+        values.put("dataservico", servicoDTO.getData());
+        values.put("devendo", servicoDTO.getDevendo());
         banco.insert("servico", null, values);
     }
-            /*
-            ContentValues values = new ContentValues();
-            values.put("numero", dados.getNumero());
-            values.put("dose", dados.getDose());
-            banco.insert("dados", null, values);
-            confirmacao = true;
-            x++;
+    public ArrayList<ServicoDTO> pesquisarServicos(){
+        Cursor cursor = banco.query("servico", new String[]{"id", "cliente", "nomeservico", "valor", "dataservico", "devendo"}, null, null, null, null, null);
+        while(cursor.moveToNext()){
+            ServicoDTO servicoDTO = new ServicoDTO();
+            servicoDTO.setId(cursor.getInt(0));
+            servicoDTO.setCliente(cursor.getString(1));
+            servicoDTO.setNomeServico(cursor.getString(2));
+            servicoDTO.setValor(cursor.getFloat(3));
+            servicoDTO.setData(cursor.getString(4));
+            servicoDTO.setDevendo(cursor.getString(5));
+
+            listaPesquisar.add(servicoDTO);
         }
-        if(!cursor.moveToNext() && (!confirmacao)){
-            ContentValues values = new ContentValues();
-            values.put("numero", dados.getNumero());
-            values.put("dose", dados.getDose());
-            banco.insert("dados", null, values);
-            x++;
-        }
+        return listaPesquisar;
     }
-    */
 }

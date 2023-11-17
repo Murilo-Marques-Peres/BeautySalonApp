@@ -22,6 +22,7 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
     Button btnAdd;
 
     ServicoDAO servicoDAO;
+    ServicoDTO servicoDTO;
 
     EditText campoNomeCliente;
     EditText campoServico;
@@ -74,7 +75,7 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Servico servico = new Servico();
+
                 String strNomeCliente = campoNomeCliente.getText().toString();
                 String strServico = campoServico.getText().toString();
                 float valor = Float.parseFloat(campoValor.getText().toString());
@@ -87,13 +88,15 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
 
                 String strData = ano.concat("-").concat(mes).concat("-").concat(dia);
 
-                servico.setCliente(strNomeCliente);
-                servico.setNomeServico(strServico);
-                servico.setValor(valor);
-                servico.setDevendo(respostaSN);
-                servico.setData(strData);
 
-                servicoDAO.inserir(servico);
+                servicoDTO.setCliente(strNomeCliente);
+                servicoDTO.setNomeServico(strServico);
+                servicoDTO.setValor(valor);
+                servicoDTO.setData(strData);
+                servicoDTO.setDevendo(respostaSN);
+
+
+                servicoDAO.inserir(servicoDTO);
                 //Date dataFormatada = formato.parse();
             }
         });

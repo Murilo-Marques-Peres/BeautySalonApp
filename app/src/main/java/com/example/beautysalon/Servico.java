@@ -3,20 +3,19 @@ package com.example.beautysalon;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Servico implements Serializable {
-    private int id;
+public class Servico{
     private String cliente;
     private String nomeServico;
     private float valor;
     private String data;
     private String devendo;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Servico(String cliente, String nomeServico, float valor, String data, String devendo){
+        this.cliente = cliente;
+        this.nomeServico = nomeServico;
+        this.valor = valor;
+        this.data = data;
+        this.devendo = devendo;
     }
 
     public String getCliente() {
