@@ -11,8 +11,12 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL("create table ");
+        db.execSQL("create table saida(id integer primary key autoincrement, " +
+                "marcaproduto varchar(45), valor decimal(8,2), data text)");
+        db.execSQL("create table servico(id integer primary key autoincrement," +
+                "cliente varchar(45), nomeservico varchar(40), valor decimal (7,2), dataservico varchar(20), devendo varchar(7))");
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

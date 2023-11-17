@@ -130,14 +130,44 @@
                 android:layout_weight="1"
                 android:gravity="center|end"
                 android:text="@string/data2" />
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
+            <EditText
+                android:id="@+id/editTextNumber3"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Dia"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Mês"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Ano"
+                android:inputType="number" />
 
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Serviço" />
     </LinearLayout>
 </ScrollView>
