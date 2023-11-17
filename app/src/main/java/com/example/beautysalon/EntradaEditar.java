@@ -22,7 +22,6 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
     Button btnAdd;
 
     ServicoDAO servicoDAO;
-    ServicoDTO servicoDTO;
 
     EditText campoNomeCliente;
     EditText campoServico;
@@ -75,6 +74,7 @@ public class EntradaEditar extends AppCompatActivity implements AdapterView.OnIt
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ServicoDTO servicoDTO = new ServicoDTO();
 
                 String strNomeCliente = campoNomeCliente.getText().toString();
                 String strServico = campoServico.getText().toString();

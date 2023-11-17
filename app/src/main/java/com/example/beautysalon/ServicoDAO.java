@@ -27,6 +27,9 @@ public class ServicoDAO {
         values.put("devendo", servicoDTO.getDevendo());
         banco.insert("servico", null, values);
     }
+    public void remover(String cliente){
+        banco.delete("servico", "cliente=yyy", null);
+    }
     public ArrayList<ServicoDTO> pesquisarServicos(){
         Cursor cursor = banco.query("servico", new String[]{"id", "cliente", "nomeservico", "valor", "dataservico", "devendo"}, null, null, null, null, null);
         while(cursor.moveToNext()){
